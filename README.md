@@ -67,6 +67,8 @@ var MyVar = 0
 
 NEW TOPIC:
 maps
+
+```golang
 var userData = map[string]int // keys are string, vals are int
 var mySlice = []string // slice of strings
 
@@ -78,6 +80,7 @@ var bookings = make([]map[string]int, 0)
 // this was list not slice, so we had to mention size
 // we print it,
 fmt.Printf("list of bookings is %v\n", bookings)
+```
 
 NEW TOPIC:
 Struct
@@ -90,6 +93,7 @@ complex cases: struct containing a map or viceversa.
 
 Ex:
 
+```golang
 // Struct define
 type Userdata struct{
   firstName string
@@ -103,6 +107,7 @@ var userData = UserData {
 }
 
 var bookings = make([]UserData, 0)
+```
 
 NEW TOPIC:
 look up fmt.printf vs fmt.Sprintf
@@ -134,6 +139,7 @@ Channels are how goroutines talk to each other
 
 
 NEW TOPIC:
+```golang
 func add(x int, y int) int {
 	return x + y
 }
@@ -163,12 +169,11 @@ func split(sum int) (x, y int) {
 var c, python, java bool
 // 3 booleans
 
-
 // you can initialize things
 var c, python, java = true, false, "no!"
 var i, j int = 1, 2
 c, python, java := true, false, "no!"
-
+```
 
 // TYPES:
 bool
@@ -188,6 +193,8 @@ The zero value is:
 false for the boolean type, and
 "" (the empty string) for strings.
 
+
+```golang
 // type conversions,
 i := 42
 f := float64(i)
@@ -214,13 +221,16 @@ func ScaleFunc(v *Vertex, f float64) {}
 //its called pointer receiver
 //Then it means it can take a direct value or a pointer. it takes both.
 
+
 var v Vertex
 fmt.Println(v.Abs()) // OK
 p := &v
 fmt.Println(p.Abs()) // OK
 //In this case, the method call p.Abs() is interpreted as (*p).Abs().
 
+
 // Interfaces exist, 'type' implements a interface. Its implicit!
+
 type I interface {
 	M()
 }
@@ -230,3 +240,4 @@ type T struct {
 func (t T) M() {
 	fmt.Println(t.S)
 }
+```
