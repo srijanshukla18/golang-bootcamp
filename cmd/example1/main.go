@@ -1,4 +1,3 @@
-// This code is all GPT-4 generated
 // The code demonstrates a simple HTTP server in Go that fetches user data
 // from a mock database and caches the results using a generic cache.
 // It showcases the use of Go's concurrency features, generics, and interfaces

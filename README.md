@@ -1,0 +1,1 @@
+I created nothing in this repo, this is a collection of notes from the internet. I am not the author of any of this. 
