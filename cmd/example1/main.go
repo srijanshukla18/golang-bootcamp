@@ -38,7 +38,7 @@ type MockDB struct {
 
 // GetUser simulates fetching a user by ID from the database. It includes a deliberate delay to
 // mimic database latency. This method satisfies the DataStore interface requirement.
-func (db *MockDB) GetUser(id int) User {
+func (db *MockDB) GetUser(id int) User { // this has pointer receiver to modify the struct
 	time.Sleep(100 * time.Millisecond) // Simulate latency
 	return db.users[id]
 }
