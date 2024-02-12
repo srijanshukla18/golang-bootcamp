@@ -20,14 +20,16 @@ type Library struct {
 // NewLibrary initializes and returns a new instance of a Library
 func NewLibrary() *Library {
 	return &Library{
-		books: make(map[int]Book),
+		books: make(map[int]Book), // its a blank map of type {int: Book}
 	}
 }
 
 // AddBook is a method of Library. Methods are functions that execute in the context of a type.
-// This method adds a book to the library.
-func (l *Library) AddBook(book Book) {
+// This method adds a book to the library.g and an error
+// unnecessary demonstration of a full function definition. i.e. func (object receiver) function_name (parameters) (return type)
+func (l *Library) AddBook(book Book) (string, error) {
 	l.books[book.ID] = book
+	return "", nil
 }
 
 // GetBook is a method to retrieve a book by its ID. Demonstrates returning multiple values.
